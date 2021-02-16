@@ -27,7 +27,7 @@ $select = $faq->getAll();
         <div class="container">
             <div class="row">
                 <div class="col col-2">
-                    <button class="btn btn-outline-success" style="width:100%; margin-top:60px;" href="ajouter.php" type="submit">Ajouter</button>
+                    <a href="ajouter.php" title="ajouter">Ajouter</a>
                 </div>
                 <div class="col col-10">
                     <table class="table">

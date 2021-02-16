@@ -1,4 +1,16 @@
 <?php
+    require 'Configuration/bdd.php';
+    require 'class/ManagerQuestion.php';
+    $tab=[];
+    if (isset($_GET['submit']) && $_GET['submit'] == "envoyer") {
+
+        $tab['question']= $_GET['question'];
+        $tab['reponse']= $_GET['reponse'];
+        $tab['date']= $_GET['date'];
+
+        $faq = new ManagerQuestion($pdo);
+        $faq->addQuestion($tab);
+    }
 
 ?>
 
@@ -23,12 +35,18 @@
         <div class="container">
             <div class="row">
                 <div class="col col-12">
-                    <form action="" method="post">
-                        <input type="text" name="question">
-                        <input type="text" name="reponse">
-                        <input type="date" name="date">
-                        <button type="submit">Envoyer</button>
-                    </form>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label" name="question">Titre de la question</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Je suis un titre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" name="reponse">Réponse</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="col-2">
+                        <input type="date" class="form-control" name="date">
+                        <input type="submit" class="btn btn-outline-success" name="submit" value="envoyer">
+                    </div>
                 </div>
             </div>
         </div>
