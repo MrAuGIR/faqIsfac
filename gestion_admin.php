@@ -25,6 +25,27 @@ $select = $faq->getAll();
     </header>
     <main>
         <div class="container">
+            <?php if (isset($_GET['delete']) && $_GET['delete'] === 'success') : ?>
+                <div class="row">
+                    <div class="alert alert-success">
+                        <p> suppression effectué </p>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php if (isset($_GET['update']) && $_GET['update'] === 'success') : ?>
+                <div class="row">
+                    <div class="alert alert-success">
+                        <p> mise a jour effectué </p>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php if (isset($_GET['add']) && $_GET['add'] === 'success') : ?>
+                <div class="row">
+                    <div class="alert alert-success">
+                        <p> ajout effectué </p>
+                    </div>
+                </div>
+            <?php endif; ?>
             <div class="row">
                 <div class="col col-2">
                     <a href="ajouter.php" title="ajouter">Ajouter</a>
