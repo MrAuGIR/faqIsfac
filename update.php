@@ -2,6 +2,7 @@
 
 require 'Configuration/bdd.php';
 require 'class/ManagerQuestion.php';
+$title = "Modifier un article";
 $error = false;
 // recuperation de l'id passé en parametre
 if (isset($_GET['id'])) {

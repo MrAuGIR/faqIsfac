@@ -1,9 +1,8 @@
 <?php
 require 'Configuration/bdd.php';
 require 'class/ManagerQuestion.php';
-
+$title = "Accueil";
 ?>
-
     <?php require_once 'header.php'; ?>
     <div class="container">
         <div class="row">
