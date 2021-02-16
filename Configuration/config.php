@@ -9,5 +9,4 @@ define('HOST', 'localhost');
 
 define('PASSWORD', '');
 
-
 ?>
