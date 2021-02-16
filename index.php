@@ -21,7 +21,7 @@ require 'class/ManagerQuestion.php';
                                     <?= $question->getQuestion() ?>
                                 </button>
                             </h2>
-                            <div id="collapse<?= $question->getId() ?>" class="accordion-collapse collapse show" aria-labelledby="heading<?= $question->getId(); ?>" data-bs-parent="#accordionExample">
+                            <div id="collapse<?= $question->getId() ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $question->getId(); ?>" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <?= $question->getReponse() ?>
                                 </div>
