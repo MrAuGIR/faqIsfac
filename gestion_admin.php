@@ -24,7 +24,10 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col col-12">
+                <div class="col col-2">
+                    <button class="btn btn-outline-success" style="width:100%; margin-top:60px;" href="ajouter.php" type="submit">Ajouter</button>
+                </div>
+                <div class="col col-10">
                     <table class="table">
                         <thead class="table-light">
                             <tr>
