@@ -49,7 +49,7 @@ class Question{
         $this->_reponse = $reponse;
     }
 
-    public function setDate(string $date)
+    public function setDate($date)
     {
         $this->_date = $date;
     }

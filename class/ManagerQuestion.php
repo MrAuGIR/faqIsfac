@@ -56,15 +56,14 @@ class ManagerQuestion{
      * methode ajout d'une question dans la base de donnée
      * @param Question $question
      */
-    public function addQuestion(Question $question)
+    public function addQuestion(array $data)
     {
         $sql = 'INSERT INTO faq (question, reponse, date,importance) VALUES (:question, :reponse, :date,:importance)';
         $req = $this->instanceBdd->prepare($sql);
-        $req->bindValue('question', $question->getQuestion(), PDO::PARAM_STR);
-        $req->bindValue('reponse', $question->getReponse(), PDO::PARAM_STR);
-        $req->bindValue('date', $question->getDate(), PDO::PARAM_STR);
-        $req->bindValue('importance', $question->getImportance(), PDO::PARAM_INT);
-        $req->bindValue('id', $question->getId(), PDO::PARAM_INT);
+        $req->bindValue('question', $data['question'], PDO::PARAM_STR);
+        $req->bindValue('reponse', $data['reponse'], PDO::PARAM_STR);
+        $req->bindValue('date', $data['date'], PDO::PARAM_STR);
+        $req->bindValue('importance', $data['importance'], PDO::PARAM_INT);
         $req->execute();
     }
 
