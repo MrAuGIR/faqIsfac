@@ -12,7 +12,7 @@ require 'class/ManagerQuestion.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="img/favicon.ico" rel="icon" type="image/png" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-    <link href="styles/styles.css" rel="stylesheet" />-->
+    <link href="styles/styles.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 
@@ -29,12 +29,12 @@ require 'class/ManagerQuestion.php';
                     <?php $questions = $manager->getAll(); ?>
                     <?php foreach ($questions as $question) : ?>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h2 class="accordion-header" id="heading<?= $question->getId(); ?>">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $question->getId(); ?>" aria-expanded="true" aria-controls="collapse<?= $question->getId(); ?>">
                                     <?= $question->getQuestion() ?>
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapse<?= $question->getId() ?>" class="accordion-collapse collapse show" aria-labelledby="heading<?= $question->getId(); ?>" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <?= $question->getReponse() ?>
                                 </div>

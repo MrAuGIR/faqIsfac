@@ -36,7 +36,7 @@ class Question{
 
     public function setId(int $id)
     {
-        return $this->_id;
+        $this->_id = $id;
     }
 
     public function setQuestion(string $question)

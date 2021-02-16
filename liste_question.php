@@ -15,7 +15,7 @@ require 'class/ManagerQuestion.php';
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <?= $question->getQuestion() ?>
+                                <?= $question->getId() ?>
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -37,7 +37,7 @@ require 'class/ManagerQuestion.php';
         <div class="container">
             <div class="col-12">
                 <ul>
-                    <li><?= $question->getQuestion(); ?></li>
+                    <li><?= $question->getId(); ?></li>
                 </ul>
             </div>
         </div>
