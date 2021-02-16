@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
   <link href="styles/styles.css" rel="stylesheet" />
   <title><?= $title ?></title>
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,7 +22,10 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+              <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="gestion_admin.php">Gestion</a>
             </li>
           </ul>
           <form class="d-flex">
