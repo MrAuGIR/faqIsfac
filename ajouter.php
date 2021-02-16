@@ -1,21 +1,25 @@
 <?php
-    require 'Configuration/bdd.php';
-    require 'class/ManagerQuestion.php';
-    $tab=[];
-    if (isset($_GET['submit']) && $_GET['submit'] == "envoyer") {
+require 'Configuration/bdd.php';
+require 'class/ManagerQuestion.php';
+$tab = [];
+if (isset($_GET['submit']) && $_GET['submit'] == "Ajouter") {
 
-        $tab['question']= $_GET['question'];
-        $tab['reponse']= $_GET['reponse'];
-        $tab['date']= $_GET['date'];
+    $tab['question'] = $_GET['question'];
+    $tab['reponse'] = $_GET['reponse'];
+    $tab['date'] = $_GET['date'];
+    $tab['importance'] = $_GET['importance'];
 
-        $faq = new ManagerQuestion($pdo);
-        $faq->addQuestion($tab);
-    }
+    print_r($tab);
+    $faq = new ManagerQuestion($pdo);
+    $faq->addQuestion($tab);
+    header('location: gestion_admin.php?add=success');
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,32 +29,40 @@
     <link href="styles/styles.css" rel="stylesheet" />
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <?php
-            require_once 'header.php';
+        require_once 'header.php';
         ?>
     </header>
     <main>
+        <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            bkLib.onDomLoaded(nicEditors.allTextAreas);
+        </script>
         <div class="container">
             <div class="row">
-                <div class="col col-12">
+                <form method="get" action="">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label" name="question">Titre de la question</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Je suis un titre">
+                        <label for="question">Question</label>
+                        <input type="text" class="form-control" name="question" id="question" placeholder="">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label" name="reponse">Réponse</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="question">la reponse</label>
+                        <textarea class="form-control" name="reponse" id="reponse" placeholder=""></textarea>
                     </div>
-                    <div class="col-2">
-                        <input type="date" class="form-control" name="date">
-                        <input type="submit" class="btn btn-outline-success" name="submit" value="envoyer">
+                    <div class="mb-3">
+                        <label for="question">Importance</label>
+                        <input type="number" class="form-control" name="importance" id="importance" placeholder="importance">
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Ajouter">
+                    </div>
+                </form>
             </div>
-        </div>
     </main>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>
