@@ -11,4 +11,7 @@ html,body{
 nav{
     margin-bottom: 30px;
 }
-
+.covid{
+    margin-top: 20px;
+    width: 100%;
+}

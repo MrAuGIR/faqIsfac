@@ -1,16 +1,17 @@
 <?php
 require 'Configuration/bdd.php';
 require 'class/ManagerQuestion.php';
-
 ?>
 
     <?php require_once 'header.php'; ?>
     <div class="container">
         <div class="row">
-            <div class="fixed col col-sm-3  col-md-2 col-lg-2">
+            <div class="fixed col-12 col-sm-3  col-md-2 col-lg-2">
                 <button class="btn btn-outline-primary" style="width:100%; color:#1E90FF; border-color:#1E90FF;" href="#" type="submit">Telecharger</button>
+                <img class="covid" src="img/Au-Québec-sur-limpulsion-du-gouvernement-la-Covid-sest-dores-et-déjà-substitué-au-le-Covid.jpg">
+                <img class="covid" src="img/panneau-port-du-masque-obligatoire-young.jpg">
             </div>
-            <div class="col col-sm-9  col-md-10 col-lg-10">
+            <div class="col-12 col-sm-9  col-md-10 col-lg-10">
                 <div class="accordion" id="accordionExample">
                     <?php $manager = new ManagerQuestion($pdo); ?>
                     <?php $questions = $manager->getAll(); ?>
