@@ -7,8 +7,8 @@ require 'class/ManagerQuestion.php';
     <?php require_once 'header.php'; ?>
     <div class="container">
         <div class="row">
-            <div class="col col-sm-3  col-md-2 col-lg-2">
-                <button class="btn btn-outline-success" style="width:100%;" href="#" type="submit">Telecharger</button>
+            <div class="fixed col col-sm-3  col-md-2 col-lg-2">
+                <button class="btn btn-outline-primary" style="width:100%; color:#1E90FF; border-color:#1E90FF;" href="#" type="submit">Telecharger</button>
             </div>
             <div class="col col-sm-9  col-md-10 col-lg-10">
                 <div class="accordion" id="accordionExample">
@@ -31,7 +31,9 @@ require 'class/ManagerQuestion.php';
                 </div>
             </div>
         </div>
+        <div>
         <a href="#"><img src="img/backDebutPage.png" style="width:50px;" alt="..."></a>
+        </div>
     </div>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
