@@ -7,7 +7,7 @@ $title = "Accueil";
     <div class="container">
         <div class="row">
             <div class="fixed col col-sm-3  col-md-2 col-lg-2">
-                <a class="btn btn-outline-primary" style="width:100%; color:#1E90FF; border-color:#1E90FF;" href="/pdf/faq-coronavirus-2020-71379.pdf" type="submit">Telecharger</button>
+                <a class="btn btn-outline-primary" style="width:100%; color:#1E90FF; border-color:#1E90FF;" href="../pdf/faq-coronavirus-2020-71379.pdf" type="submit">Telecharger</a>
             </div>
             <div class="col col-sm-9  col-md-10 col-lg-10">
                 <div class="accordion" id="accordionExample">
