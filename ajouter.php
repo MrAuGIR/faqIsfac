@@ -2,7 +2,7 @@
     require 'Configuration/bdd.php';
     require 'class/ManagerQuestion.php';
     $tab=[];
-    if (isset($_GET['submit'] && $_GET['submit'] == "envoyer")) {
+    if (isset($_GET['submit']) && $_GET['submit'] == "envoyer") {
 
         $tab['question']= $_GET['question'];
         $tab['reponse']= $_GET['reponse'];

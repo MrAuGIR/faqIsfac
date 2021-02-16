@@ -44,10 +44,10 @@
                                             <?= $question->getQuestion(); ?>
                                         </td>
                                         <td>
-                                        <a href="modifier.php?&id=<?php echo $question->getId(); ?>" title="modifier">modifier</a>
+                                        <a href="update.php?&id=<?php echo $question->getId(); ?>" title="modifier">modifier</a>
                                     </td>
                                     <td>
-                                        <a href="supprimer.php?&id=$id" title="supprimer">supprimer </a>
+                                        <a href="delete.php?&id=$id" title="supprimer">supprimer </a>
                                     </td>
                                     </tr>
 
