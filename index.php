@@ -6,10 +6,15 @@ require 'class/ManagerQuestion.php';
     <?php require_once 'header.php'; ?>
     <div class="container">
         <div class="row">
+<<<<<<< HEAD
             <div class="fixed col-12 col-sm-3  col-md-2 col-lg-2">
                 <button class="btn btn-outline-primary" style="width:100%; color:#1E90FF; border-color:#1E90FF;" href="#" type="submit">Telecharger</button>
                 <img class="covid" src="img/Au-Québec-sur-limpulsion-du-gouvernement-la-Covid-sest-dores-et-déjà-substitué-au-le-Covid.jpg">
                 <img class="covid" src="img/panneau-port-du-masque-obligatoire-young.jpg">
+=======
+            <div class="fixed col col-sm-3  col-md-2 col-lg-2">
+                <a class="btn btn-outline-primary" style="width:100%; color:#1E90FF; border-color:#1E90FF;" href="../pdf/faq-coronavirus-2020-71379.pdf" type="submit">Telecharger</a>
+>>>>>>> 00317d809c1acfdf679363bff0185fb7aba7bd3f
             </div>
             <div class="col-12 col-sm-9  col-md-10 col-lg-10">
                 <div class="accordion" id="accordionExample">

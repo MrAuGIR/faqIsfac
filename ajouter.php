@@ -7,16 +7,13 @@ if (isset($_GET['submit']) && $_GET['submit'] == "Ajouter") {
 
     $tab['question'] = $_GET['question'];
     $tab['reponse'] = $_GET['reponse'];
-    $tab['date'] = $_GET['date'];
+    $tab['date'] = date('Y-m-d');
     $tab['importance'] = $_GET['importance'];
 
-    print_r($tab);
     $faq = new ManagerQuestion($pdo);
     $faq->addQuestion($tab);
     header('location: gestion_admin.php?add=success');
 }
-
-
         require_once 'header.php';
         ?>
     <main>
